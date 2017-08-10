@@ -6,8 +6,6 @@
   <title>Tracked Controls</title>
   <meta name="description" content="Tracked Controls – A-Frame">
 
-  <script src="https://unpkg.com/ipfs/dist/index.js"></script>
-  <!-- loading the human-readable (not minified) version -->
 
   <script src="build/index.js"></script>
 
@@ -19,12 +17,19 @@
       <img id="floor" src="assets/images/floor.jpg" crossOrigin="anonymous" />
       <img id="skymap" src="assets/images/sky.jpg" crossOrigin="anonymous" />
     </a-assets>
-    
+
     <!-- Hands -->
     <a-entity sculpt-between-controls>
-      <a-entity id="left-hand" hand-controls="left"></a-entity>
-      <a-entity id="right-hand" hand-controls="right"></a-entity>
+      <a-entity id="left-hand" super-hands oculus-touch-controls="hand: left">
+        <a-cone color="#19b5eb" height="0.2" position="0 0. 0" rotation="-90 0 0" radius-top="0.0005" radius-bottom="0.005"/>
+      </a-entity>
+      <a-entity id="right-hand" super-hands oculus-touch-controls="hand: right">
+        <a-cone color="#19b5eb" height="0.2" position="0 0. 0" rotation="-90 0 0" radius-top="0.0005" radius-bottom="0.005"/>
+      </a-entity>
     </a-entity>
+
+        <a-box hoverable grabbable stretchable drag-droppable
+    color="blue" position="0 0 -1"></a-box>
 
     <!-- Environment -->
     <a-entity id="ground" geometry="primitive: box; width: 12; height: 0.01; depth: 12" material="shader: flat; src: #floor"></a-entity>

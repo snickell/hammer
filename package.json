@@ -23,9 +23,11 @@
   },
   "dependencies": {
     "aframe": "^0.6.1",
+    "aframe-extras": "^3.9.0",
     "aframe-keyboard": "^0.0.1",
     "aframe-react": "^4.3.0",
     "k-frame": "^0.3.2-beta2",
+    "kframe": "^0.3.0",
     "simulant": "^0.2.2"
   }
 }

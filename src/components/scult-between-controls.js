@@ -43,18 +43,18 @@ AFRAME.registerComponent('sculpt-between-controls', {
                 } else {
                     this.activeR = currentHandActive;
                 }
-                
+
                 // if at the end both strokes are inactive, cleanup
                 if (!this.activeL && !this.activeR) {
                     this.previousEntity = this.currentEntity;
                     this.currentStroke = null;
                     console.log("Done with stroke");
-                }                
+                }
             }
         }
-        
+
         rightHandEl.addEventListener('buttonchanged', evt => onButtonChanged(evt, false));
-        leftHandEl.addEventListener('buttonchanged', evt => onButtonChanged(evt, true));        
+        leftHandEl.addEventListener('buttonchanged', evt => onButtonChanged(evt, true));
     },
 
     tick: (() => {
@@ -65,16 +65,16 @@ AFRAME.registerComponent('sculpt-between-controls', {
         var positionR = new THREE.Vector3();
         var rotationR = new THREE.Quaternion();
         var scaleR = new THREE.Vector3();
-        
 
-
+        let pointerPosR = new THREE.Vector3();
+        let pointerPosL = new THREE.Vector3();
         return function tick(time, delta) {
             if (this.activeL || this.activeR) {
                 this.leftHandObj.matrixWorld.decompose(positionL, rotationL, scaleL);
-                var pointerPosL = this.getPointerPosition(positionL, rotationL);
+                pointerPosL = this.getPointerPosition(positionL, rotationL, pointerPosL);
 
                 this.rightHandObj.matrixWorld.decompose(positionR, rotationR, scaleR);
-                var pointerPosR = this.getPointerPosition(positionR, rotationR);
+                pointerPosR = this.getPointerPosition(positionR, rotationR, pointerPosR);
 
                 // if both brushes are active, use both pointerPos, else both pointerPos are from the active brush
                 const point1 = this.activeL ? pointerPosL : pointerPosR;
@@ -85,24 +85,12 @@ AFRAME.registerComponent('sculpt-between-controls', {
         };
     })(),
     getPointerPosition: (function () {
-        var pointerPosition = new THREE.Vector3();
-        var controllerOffset = {
-            'vive-controls': {
-                vec: new THREE.Vector3(0, 0.7, 1),
-                mult: -0.03
-            },
-            'oculus-touch-controls': {
-                vec: new THREE.Vector3(0, 0, 2.8),
-                mult: -0.05
-            }
+        var offsets = {
+                vec: new THREE.Vector3(0, 0, 1),
+                mult: -0.1
         };
 
-        return function getPointerPosition(position, orientation) {
-            if (!this.controllerName) {
-                return position;
-            }
-
-            var offsets = controllerOffset[this.controllerName];
+        return function getPointerPosition(position, orientation, pointerPosition) {
             var pointer = offsets.vec
                 .clone()
                 .applyQuaternion(orientation)
