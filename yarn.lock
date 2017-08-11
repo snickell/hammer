@@ -48,8 +48,8 @@ aframe-event-set-component@^0.3.0:
   resolved "https://registry.yarnpkg.com/aframe-event-set-component/-/aframe-event-set-component-0.3.1.tgz#be67bf2b5691cf63b3d6935e8b3de87b3039e1fe"
 
 aframe-extras@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/aframe-extras/-/aframe-extras-3.9.0.tgz#2d54a871bd0f68f069ab6dba462e8519dc792e04"
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/aframe-extras/-/aframe-extras-3.9.1.tgz#1153dcf09b77b89d8ae12c03052ba6cb7dc1fd96"
   dependencies:
     aframe-physics-system "^1.4.3"
 
@@ -119,9 +119,9 @@ aframe@^0.6.1, aframe@latest:
   dependencies:
     "@tweenjs/tween.js" "^16.8.0"
     browserify-css "^0.8.2"
-    debug ngokevin/debug#noTimestamp
+    debug "github:ngokevin/debug#noTimestamp"
     deep-assign "^2.0.0"
-    document-register-element dmarcos/document-register-element#8ccc532b7
+    document-register-element "github:dmarcos/document-register-element#8ccc532b7"
     envify "^3.4.1"
     load-bmfont "^1.2.3"
     object-assign "^4.0.1"
@@ -870,8 +870,8 @@ block-stream@*:
     inherits "~2.0.0"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
-  version "4.11.7"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.7.tgz#ddb048e50d9482790094c13eb3fcfc833ce7ab46"
+  version "4.11.8"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
 
 boom@2.x.x:
   version "2.10.1"
@@ -961,10 +961,10 @@ browserify-zlib@^0.1.4:
     pako "~0.2.0"
 
 browserslist@^2.1.2:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.3.0.tgz#b2aa76415c71643fe2368f6243b43bbbb4211752"
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.3.1.tgz#39500a2090330b2a090120ea6c7fc78b6e091c5e"
   dependencies:
-    caniuse-lite "^1.0.30000710"
+    caniuse-lite "^1.0.30000712"
     electron-to-chromium "^1.3.17"
 
 buffer-equal-constant-time@1.0.1:
@@ -1009,9 +1009,9 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
-caniuse-lite@^1.0.30000710:
-  version "1.0.30000712"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000712.tgz#b4732def2459224f3f78c6a9ba103abfcc705670"
+caniuse-lite@^1.0.30000712:
+  version "1.0.30000715"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000715.tgz#c327f5e6d907ebcec62cde598c3bf0dd793fb9a0"
 
 "cannon@github:donmccurdy/cannon.js#v0.6.2-dev1":
   version "0.6.2"
@@ -1289,7 +1289,7 @@ debug@^2.1.1, debug@^2.2.0:
   dependencies:
     ms "2.0.0"
 
-debug@ngokevin/debug#noTimestamp:
+"debug@github:ngokevin/debug#noTimestamp":
   version "2.2.0"
   resolved "https://codeload.github.com/ngokevin/debug/tar.gz/ef5f8e66d49ce8bc64c6f282c15f8b7164409e3a"
 
@@ -1361,7 +1361,7 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-document-register-element@dmarcos/document-register-element#8ccc532b7:
+"document-register-element@github:dmarcos/document-register-element#8ccc532b7":
   version "0.5.4"
   resolved "https://codeload.github.com/dmarcos/document-register-element/tar.gz/8ccc532b7"
 
@@ -1399,8 +1399,8 @@ ecdsa-sig-formatter@1.0.9:
     safe-buffer "^5.0.1"
 
 electron-to-chromium@^1.3.17:
-  version "1.3.17"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.17.tgz#41c13457cc7166c5c15e767ae61d86a8cacdee5d"
+  version "1.3.18"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.18.tgz#3dcc99da3e6b665f6abbc71c28ad51a2cd731a9c"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -2490,8 +2490,8 @@ node-emoji@^1.4.1:
     lodash.toarray "^4.4.0"
 
 node-fetch@^1.0.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.1.tgz#899cb3d0a3c92f952c47f1b876f4c8aeabd400d5"
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.2.tgz#c54e9aac57e432875233525f3c891c4159ffefd7"
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
